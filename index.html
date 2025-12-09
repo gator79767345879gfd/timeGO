@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="light">
+    <button class="theme-toggle" id="themeToggle">🌙</button>
+
+    <div class="container">
+        <div class="time-section">
+            <div class="time" id="time">00:00:00 PM</div>
+            <div class="date" id="date">Monday, January 1, 2025</div>
+            <div class="week" id="weekNumber">Week 1</div>
+        </div>
+
+        <div class="quote-box">
+            <div class="quote" id="quote">"Loading inspirational quote..."</div>
+            <div class="author" id="author"></div>
+            <div class="attribution">Quotes by <a href="https://zenquotes.io/" target="_blank">ZenQuotes API</a></div>
+        </div>
+
+        <div class="progress-section">
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Day</span>
+                    <span id="dayPercent">0.0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="dayProgress"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Week</span>
+                    <span id="weekPercent">0.0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="weekProgress"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Month</span>
+                    <span id="monthPercent">0.0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="monthProgress"></div>
+                </div>
+            </div>
+
+            <div class="progress-item">
+                <div class="progress-label">
+                    <span>Year</span>
+                    <span id="yearPercent">0.0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="yearProgress"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

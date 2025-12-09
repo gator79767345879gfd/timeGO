@@ -1,0 +1,215 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    transition: background-color 0.3s, color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+body.light {
+    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
+    color: #2c3e50;
+}
+
+body.dark {
+    background: linear-gradient(135deg, #1a2332 0%, #0f1419 100%);
+    color: #e0e6ed;
+}
+
+.container {
+    max-width: 900px;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3vh;
+}
+
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: none;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+body.dark .theme-toggle {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.15);
+}
+
+body.dark .theme-toggle:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.time-section {
+    text-align: center;
+}
+
+.time {
+    font-size: 6vw;
+    font-weight: 300;
+    letter-spacing: 4px;
+    margin-bottom: 1vh;
+}
+
+.date {
+    font-size: 1.8vw;
+    opacity: 0.7;
+    margin-bottom: 0.5vh;
+}
+
+.week {
+    font-size: 1vw;
+    opacity: 0.5;
+}
+
+.quote-box {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    padding: 2.5vh 3vw;
+    border-radius: 16px;
+    text-align: center;
+    transition: background-color 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+body.dark .quote-box {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.quote {
+    font-size: 1.3vw;
+    font-style: italic;
+    line-height: 1.5;
+    margin-bottom: 1vh;
+    opacity: 0.95;
+}
+
+.author {
+    font-size: 0.9vw;
+    opacity: 0.6;
+}
+
+.attribution {
+    font-size: 0.65vw;
+    opacity: 0.4;
+    margin-top: 0.8vh;
+}
+
+.attribution a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+.progress-section {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+}
+
+.progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8vh;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1vw;
+}
+
+.progress-label span:first-child {
+    opacity: 0.7;
+    font-weight: 400;
+}
+
+.progress-label span:last-child {
+    font-weight: 500;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 12px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+body.dark .progress-bar {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+
+body.dark .progress-fill {
+    background: linear-gradient(90deg, #7b8fc7 0%, #9b7bc0 100%);
+}
+
+@media (max-width: 768px) {
+    .time {
+        font-size: 12vw;
+    }
+
+    .date {
+        font-size: 4vw;
+    }
+
+    .week {
+        font-size: 2.5vw;
+    }
+
+    .quote {
+        font-size: 3.5vw;
+    }
+
+    .author {
+        font-size: 2.5vw;
+    }
+
+    .attribution {
+        font-size: 2vw;
+    }
+
+    .progress-label {
+        font-size: 3vw;
+    }
+}
